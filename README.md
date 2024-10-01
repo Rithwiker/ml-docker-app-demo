@@ -1,7 +1,6 @@
-# ml-docker-app-demo
-This project creates a simple machine learning model using the Iris dataset and serves it through a Flask API inside a Docker container. The app allows users to send data to an endpoint and get predictions from the model.
+ml-docker-app-demo
 
-<h1>ML Docker Flask App</h1>
+<h1>Machine Learning Docker Flask App</h1>
 
 This project creates a simple machine learning model using the Iris dataset and serves it through a Flask API inside a Docker container. The app allows users to send data to an endpoint and get predictions from the model.
 
@@ -11,19 +10,20 @@ The project uses a DecisionTreeClassifier to classify iris flowers into three sp
 <h3>Instructions to Build and Run the Docker Container</h3>
 1. Clone the Repository
 
-`git clone https://github.com/yourusername/your-repository.git
-cd your-repository`
+`git clone https://github.com/yourusername/your-repository.gitcd your-repository`
 
 2. Build the Docker Image
-
+   
 `sudo docker build -t ml-app .`
 
 This will create a Docker image with the Flask app and the machine learning model.
+
 
 3. Run the Docker Container
    Once the image is built, run the container, exposing the Flask app on port   4000 of your machine:
 
    `sudo docker run -p 4000:80 ml-app`
+
    
 The Flask app will now be running, and you can access it via the external IP of your virtual machine or localhost if running locally.
 
@@ -54,7 +54,7 @@ The API will return a JSON object with the predicted class label:
 <h3>Additional Information</h3>
 
 <h3>Troubleshooting</h3>
-Firewall Configuration*: Ensure that port 4000 (or the port you're using) is open in the firewall settings of your virtual machine.
+Firewall Configuration: Ensure that port 4000 (or the port you're using) is open in the firewall settings of your virtual machine.
 
 <h3>Retraining the Model</h3>
 To retrain the model, modify the train_model.py file and run it in your local environment or inside the Docker container:
